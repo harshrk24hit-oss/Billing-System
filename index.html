@@ -48,6 +48,30 @@
       z-index: 1000;
     }
 
+    /* Input box styling */
+    .form-section input {
+      padding: 10px 14px;
+      margin: 0 10px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      outline: none;
+      font-size: 15px;
+      width: 180px;
+      transition: all 0.3s ease;
+    }
+    .form-section input:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
+    }
+    .form-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
     /* Table Styling */
     table {
       width: 80%;
@@ -70,6 +94,20 @@
     }
     tr:hover {
       background-color: #ddd;
+    }
+
+    /* Summary section inline */
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .summary p {
+      margin: 0;
+      font-weight: 600;
+      font-size: 16px;
     }
 
     /* Print Mode */
@@ -109,7 +147,7 @@
   </div>
 
   <!-- Form Section -->
-  <div class="form-section glass text-center w-75 mx-auto">
+  <div class="form-section glass w-75 mx-auto">
     <label for="item-name">Item Name:</label>
     <input type="text" id="item-name" placeholder="Enter item name" required>
     <label for="item-price">Price:</label>
@@ -139,7 +177,7 @@
   </div>
 
   <!-- Summary -->
-  <div class="glass w-75 mx-auto mt-4">
+  <div class="glass w-75 mx-auto mt-4 summary">
     <p><strong>Subtotal:</strong> ₹<span id="subtotal">0.00</span></p>
     <p><strong>Tax (10%):</strong> ₹<span id="tax">0.00</span></p>
     <p><strong>Total:</strong> ₹<span id="total">0.00</span></p>
