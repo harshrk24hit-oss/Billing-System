@@ -49,19 +49,6 @@
     }
 
     /* Input box styling */
-    .form-section input {
-      padding: 10px 14px;
-      border: 1px solid rgba(0, 0, 0, 0.25);
-      border-radius: 8px;
-      outline: none;
-      font-size: 15px;
-      width: 165px;
-      transition: all 0.3s ease;
-    }
-    .form-section input:focus {
-      border-color: #0d6efd;
-      box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
-    }
     .form-section {
       display: flex;
       justify-content: center;
@@ -69,6 +56,36 @@
       flex-wrap: wrap;
       gap: 15px;
       margin-bottom: 25px;
+    }
+    .form-section label {
+      font-weight: 500;
+    }
+    .form-section input {
+      flex: 1;
+      min-width: 180px;
+      max-width: 220px;
+      padding: 10px 14px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      outline: none;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+    .form-section input:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
+    }
+
+    /* On smaller screens stack vertically */
+    @media (max-width: 768px) {
+      .form-section {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .form-section input {
+        width: 100%;
+        max-width: 100%;
+      }
     }
 
     /* Table Styling */
